@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div>
+        <div class="container-fluid">
+            <div class="container">
+                <header>
+                    <h1 class="display-4 text-black-50 text-center mb-2 mt-5">Trainers/Course Form</h1>
+                </header>
+            </div>
+            <div class="container">
+                <main>
+                    <form class="justify-content-center">
+                        <fieldset class="form-group" disabled>
+                            <legend>Course Details</legend>
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label" for="crsTitle">Title:</label>
+                                <div class="col-10">
+                                    <input class="form-control bg-light" id="crsTitle" type="text" name="courseTitle" value="CB11" pattern=".{2,10}" maxlength="10" autocomplete="off" placeholder="2-10 characters" required />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label" for="crsStream">Stream:</label>
+                                <div class="col-10">
+                                    <input class="form-control bg-light" id="crsStream" type="text" name="courseStream" value="C#" pattern=".{2,10}" maxlength="10" autocomplete="off" placeholder="2-10 characters" required />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label" for="crsType">Type:</label>
+                                <div class="col-10">
+                                    <input class="form-control bg-light" id="crsType" type="text" name="courseType" value="online" pattern=".{2,30}" maxlength="30" autocomplete="off" placeholder="2-30 characters" required />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label" for="crsStartDate">Start Date:</label>
+                                <div class="col-10">
+                                    <input class="form-control bg-light" id="crsStartDate" type="date" name="courseStartDate" value="2020-09-16" required />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label" for="crsEndDate">End Date:</label>
+                                <div class="col-10">
+                                    <input class="form-control bg-light" id="crsEndDate" type="date" name="courseEndDate" value="2021-03-16" required />
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <legend>Select Trainers</legend>
+                            <select class=" custom-select" id="trainerSel" name="trainersIds" multiple size="8">
+                                <optgroup class="addToCourse" label="Add to this course">
+                                    <option value="4">Aliki Tsirozidi</option>
+                                </optgroup>
+                                <optgroup class="removeFromCourse" label="Remove from this course">
+                                    <option value="r1">George Pasparakis</option>
+                                    <option value="r2">Ektoras Gatsos</option>
+                                    <option value="r3">Michalis Chamilos</option>
+                                </optgroup>
+                            </select>
+                            <a href="../../Trainers/NewTrainer.html" class="btn btn-block btn-outline-secondary text-light btn-dark mb-4 mt-2">New Trainer</a>
+                        </fieldset>
+                        <div class="form-row justify-content-start justify-content-md-center">
+                            <input class="col-12 col-md-2 col-lg-1 btn btn-lg btn-primary m-2 col-1" type="submit" value="Save" />
+                            <a class="col-12 col-md-2 col-lg-1 btn btn-lg btn-danger m-2 col-1" href="TrainersPerCourse.html" id="cancelBtn">Cancel</a>
+                        </div>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="../../../JS/JQButtons.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="container-fluid mt-3">
+        </header>
+
+        <div class="container-fluid">
+            <div class="container">
+                <header>
+                    <h1 class="display-4 text-black-50 text-center mt-5 ">Assignment Form</h1>
+                </header>
+            </div>
+            <div class="container">
+                <main>
+                    <form class="justify-content-center">
+                        <fieldset class="form-group">
+                            <legend>Assignment Details</legend>
+                            <label class="col-form-label" for="assignTitle">Title:</label>
+                            <input class="form-control bg-light" id="assignTitle" type="text" name="asignmentTitle" value="IndividualProject" pattern=".{2,50}" maxlength="50" autocomplete="off" placeholder="2-50 characters" required />
+                            <label class="col-form-label" for="assignDescription">Description:</label>
+                            <input class="form-control bg-light" id="assignDescription" type="text" name="assignmentDescription" value="Project" pattern=".{2,50}" maxlength="50" autocomplete="off" placeholder="2-50 characters" required />
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <legend>Due Date</legend>
+                            <label class="col-form-label" for="assignSubDate">Submition Date:</label>
+                            <input class="form-control bg-light" id="assignSubDate" type="date" name="assignmentSubDate" value="2020-09-22" required />
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <legend>Marks</legend>
+                            <label class="col-form-label" for="assignOralMark">Oral Mark:</label>
+                            <input class="form-control bg-light" id="assignOralMark" type="number" min="0" max="100" name="assignmentOralMark" value="50" autocomplete="off" placeholder="0-100" required />
+                            <label class="col-form-label" for="assignTotalMark">Total Mark:</label>
+                            <input class="form-control bg-light" id="assignTotalMark" type="number" min="0" max="100" name="assignmentTotalMark" value="100" autocomplete="off" placeholder="0-100" required />
+                        </fieldset>
+                        <div class="row justify-content-start justify-content-md-center">
+                            <input class="col-12 col-md-2 col-lg-1 btn btn-lg btn-primary m-2 col-1" type="submit" value="Save" />
+                            <a class="col-12 col-md-2 col-lg-1 btn btn-lg btn-danger m-2 col-1" href="Assignments.html" id="cancelBtn">Cancel</a>
+                        </div>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="../../JS/JQButtons.js"></script>
+    <script src="../../JS/JQDateConstrains.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            dateConstrain(-1, 1);
+
+        });
+    </script>
+</body>
+</html>
